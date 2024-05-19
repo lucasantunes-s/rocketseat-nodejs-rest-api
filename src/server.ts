@@ -1,23 +1,17 @@
 import fastify from "fastify";
 import { knex } from "./database";
-import crypto from 'node:crypto'
+import { env } from "./env";
+import 'dotenv/config'
+import { transactionsRoutes } from "./routes/transactions";
 
 
 const app = fastify();
 
-app.get('/hello', async () => {
-    const transactions = await knex('transactions')
-        .where('amount', 500)
-        .select('*')
-        .returning('*')
-
-    return transactions
-
-})
+app.register(transactionsRoutes)
 
 app
     .listen({ 
-        port: 3333,
+        port: env.PORT
     })
     .then(() => {
         console.log('HTTP server Running!')
