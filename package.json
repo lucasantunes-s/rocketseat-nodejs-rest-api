@@ -17,8 +17,11 @@
     "@types/json5": "^2.2.0",
     "@types/node": "^20.12.8",
     "@types/semver": "^7.5.8",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
     "tsx": "^4.8.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   },
   "dependencies": {
     "@fastify/cookie": "^9.3.1",

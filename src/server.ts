@@ -1,16 +1,7 @@
-import fastify from "fastify";
 import { env } from "./env";
 import 'dotenv/config'
-import { transactionsRoutes } from "./routes/transactions";
-import cookies from '@fastify/cookie'
+import { app } from "./app";
 
-const app = fastify();
-
-app.register(cookies)
-
-app.register(transactionsRoutes, {
-    prefix: 'transactions',
-})
 
 app
     .listen({ 
