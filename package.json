@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "lint": "eslint src .ts --fix",
-    "knex": "node --import tsx ./node_modules/knex/bin/cli.js"
+    "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
+    "build": "tsup src"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "@types/semver": "^7.5.8",
     "@types/supertest": "^6.0.2",
     "supertest": "^7.0.0",
+    "tsup": "^8.0.2",
     "tsx": "^4.8.2",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
